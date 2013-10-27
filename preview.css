@@ -1,0 +1,111 @@
+/* В данный файл необходимо дабавить свои стили для предпросмотра, т.к. предпосмотр фактически является отдельной страницей и не использует общие стили, которые вы подключали в main.tpl  */
+
+/* Найдите в своём основном CSS строки отвечающие за короткую, полную новости и статические страницы, а потом просто скопируйте их сюда. Плюс к этому, необходимо скопировать и все универсальные стили, такие как например CSS reset */
+
+/* Обратите внимание, если в ваших стилях которые вы сюда копируете, есть картинки, то пути на них следует изменить на такие: url("../../templates/имя_папки_шаблона/images/image.gif")  */
+
+
+* {margin:0;padding:0;}
+
+
+/* Предпросмотр новостей выводится внутри fieldset контейнера, поэтому стили для него нужны обязательно */
+fieldset {padding:15px;border:1px solid #dadada !important;background:#fff;width:680px;margin:0 auto;text-align:left;}
+
+
+/* Краткая новость */
+.news {}
+
+
+/* Полная новость */
+.newsFull {}
+
+/* Статические страницы */
+.static {}
+
+
+
+/* 
+#
+# Далее идут стандартные стили DLE, которые тоже могу понадобится при предпросмотре. Вы можете скопировать их из файла dle.css (разумеется только если в него вносились изменения)
+#
+ */
+
+
+/* Рейтинг */
+.rating {width:85px;height:15px;font-size:0.9em;}
+
+.unit-rating {width:85px;height:15px;position:relative;background:url("../../templates/test-template/images/rating.png") repeat-x;list-style:none;margin:0;padding:0;}
+.unit-rating li {text-indent:-90000px;float:left;margin:0;padding:0;}
+.unit-rating li a {display:block;width:17px;height:15px;text-decoration:none;text-indent:-9000px;z-index:4;position:absolute;padding:0;outline:none !important;}
+.unit-rating li a:hover {background:url("../../templates/test-template/images/rating.png") 0 -15px;z-index:2;left:0;}
+
+.unit-rating a.r1-unit {left:0;} .unit-rating a.r1-unit:hover {width:17px;}
+.unit-rating a.r2-unit {left:17px;} .unit-rating a.r2-unit:hover {width:34px;}
+.unit-rating a.r3-unit {left:34px;} .unit-rating a.r3-unit:hover {width:51px;}
+.unit-rating a.r4-unit {left:51px;} .unit-rating a.r4-unit:hover {width:68px;}
+.unit-rating a.r5-unit {left:68px;} .unit-rating a.r5-unit:hover {width:85px;}
+
+.unit-rating li.current-rating {background:url("../../templates/test-template/images/rating.png") 0 -30px;position:absolute;height:15px;display:block;text-indent:-9000px;z-index:1;}
+
+
+/* Цитаты, спойлер */
+.title_quote,.quote, .title_spoiler, .text_spoiler {padding:5px;background:#f9fafa;border:1px solid #dce7e7;overflow:hidden;}
+.title_quote, .title_spoiler {background:#f9fafa;}
+.title_quote {border-bottom:0;font-weight:bold;}
+.title_spoiler {font-weight:bold;}
+.text_spoiler {border-top:0;text-align:justify;}
+
+
+/* Подсветка текста в теге [code] */
+pre code {display:block;padding:0.5em;background:#f9fafa;border:1px solid #dce7e7;overflow:auto;white-space:pre;}
+pre .comment,pre .template_comment,pre .diff .header,pre .doctype,pre .lisp .string,pre .javadoc {color:#93a1a1;font-style:italic;}
+pre .keyword,pre .css .rule .keyword,pre .winutils,pre .javascript .title,pre .method,pre .addition,pre .css .tag,pre .lisp .title {color:#859900;}
+pre .number,pre .command,pre .string,pre .tag .value,pre .phpdoc,pre .tex .formula,pre .regexp,pre .hexcolor {color:#2aa198;}
+pre .title,pre .localvars,pre .function .title,pre .chunk,pre .decorator,pre .builtin,pre .built_in,pre .lisp .title,pre .identifier,pre .title .keymethods,pre .id {color:#268bd2;}
+pre .tag .title,pre .rules .property,pre .django .tag .keyword {font-weight:bold;}
+pre .attribute,pre .variable,pre .instancevar,pre .lisp .body,pre .smalltalk .number,pre .constant,pre .class .title,pre .parent,pre .haskell .label {color:#b58900;}
+pre .preprocessor,pre .pi,pre .shebang,pre .symbol,pre .diff .change,pre .special,pre .keymethods,pre .attr_selector,pre .important,pre .subst,pre .cdata {color:#cb4b16;}
+pre .deletion {color:#dc322f;}
+pre .tex .formula {background:#eee8d5;}
+
+
+/* Ссылка на скачивание прикрепленного файла в новостях */
+.attachment {color:#808080;}
+
+
+/* Highslide скрипт. Показывает оригинальную картинку загруженную на сайт из уменьшенной копии */
+.highslide-wrapper, .highslide-outline {background:#FFFFFF;}
+.highslide-image {border:2px solid #FFFFFF;}
+.highslide-active-anchor {visibility:hidden;}
+.highslide-active-anchor img {visibility:hidden;}
+.highslide-dimming {background-color:black;}
+.highslide-html {background-color:white;}
+.highslide-loading {display:block;color:white;font-size:9px;font-weight:bold;text-decoration:none;padding:3px;border:1px solid white;background-color:black;}
+a.highslide-full-expand {background:url("../../../engine/classes/highslide/graphics/fullexpand.gif") no-repeat;display:block;margin:0 10px 10px 0;width:34px;height:34px;}
+.highslide-display-block {display:block;}
+.highslide-display-none {display:none;}
+.highslide-caption {display:none;padding:5px;background:white;}
+.highslide-controls {width:195px;height:40px;background:url("../../../engine/classes/highslide/graphics/controlbar-black-border.gif") no-repeat 0 -90px;margin-right:15px;margin-bottom:10px;margin-top:10px;}
+.highslide-controls ul {position:relative;left:15px;height:40px;list-style:none;margin:0;padding:0;background:url("../../../engine/classes/highslide/graphics/controlbar-black-border.gif") no-repeat 100% -90px;}
+.highslide-controls li {float:left;padding:5px 0;}
+.highslide-controls a {background:url("../../../engine/classes/highslide/graphics/controlbar-black-border.gif");display:block;float:left;height:30px;width:30px;outline:none;}
+.highslide-controls a.disabled {cursor:default;}
+.highslide-controls a span {display:none;}
+.highslide-controls .highslide-previous a {background-position:0 0;}
+.highslide-controls .highslide-previous a:hover {background-position:0 -30px;}
+.highslide-controls .highslide-previous a.disabled {background-position:0 -60px !important;}
+.highslide-controls .highslide-play a {background-position:-30px 0;}
+.highslide-controls .highslide-play a:hover {background-position:-30px -30px;}
+.highslide-controls .highslide-play a.disabled {background-position:-30px -60px !important;}
+.highslide-controls .highslide-pause a {background-position:-60px 0;}
+.highslide-controls .highslide-pause a:hover {background-position:-60px -30px;}
+.highslide-controls .highslide-next a {background-position:-90px 0;}
+.highslide-controls .highslide-next a:hover {background-position:-90px -30px;}
+.highslide-controls .highslide-next a.disabled {background-position:-90px -60px !important;}
+.highslide-controls .highslide-move a {background-position:-120px 0;}
+.highslide-controls .highslide-move a:hover {background-position:-120px -30px;}
+.highslide-controls .highslide-full-expand a {background-position:-150px 0;}
+.highslide-controls .highslide-full-expand a:hover {background-position:-150px -30px;}
+.highslide-controls .highslide-full-expand a.disabled {background-position:-150px -60px !important;}
+.highslide-controls .highslide-close a {background-position:-180px 0;}
+.highslide-controls .highslide-close a:hover {background-position:-180px -30px;}
