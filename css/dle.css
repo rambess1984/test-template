@@ -303,8 +303,8 @@ button.ui-button::-moz-focus-inner {border:0;padding:0;}
 
 
 /* Прогресс бар заполненности персональных сообщений */
-.pm_progress_bar {border:1px solid #d8d8d8;padding:1px;margin:10px 0;border-radius:3px;}
-.pm_progress_bar span {background:green;font-size:0;text-indent:100%;white-space:nowrap;height:15px;display:block;overflow:hidden;border-radius:3px;}
+.pm_progress_bar {border:1px solid #d8d8d8;padding:1px;margin:10px 0;border-radius:3px;box-shadow:inset 0 2px 3px rgba(0,0,0,.05), 0 1px 0 rgba(0,0,0,.04);}
+.pm_progress_bar span {background:green;font-size:0;text-indent:100%;white-space:nowrap;height:20px;display:block;overflow:hidden;border-radius:3px;box-shadow:inset 0 1px 6px rgba(255,255,255,.61);}
 .pm_progress_bar span[style^="width: 5"], .pm_progress_bar span[style^="width: 6"], .pm_progress_bar span[style^="width: 7"], .pm_progress_bar span[style^="width: 8"] {background:#E3BC40}
 .pm_progress_bar span[style="width: 5%"], .pm_progress_bar span[style="width: 6%"], .pm_progress_bar span[style="width: 7%"], .pm_progress_bar span[style="width: 8%"] {background:green}
 .pm_progress_bar span[style^="width: 9"] {background:#EA5A5A}
@@ -380,7 +380,7 @@ background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(sta
 #dlevotespopup fieldset {border-top:1px solid #d8d8d8;}
 
 
-/* MASHA JS (выделение текста и всплывающее окно поделиться ссылкой) */
+/* MASHA JS (выделение текста и всплывающее окно "поделиться ссылкой") */
 #marker-bar,#txtselect_marker {display:block;visibility:hidden;position:absolute;top:0;left:0;z-index:1200;opacity:0;-webkit-transition:opacity .4s, visibility .1s linear .4s;-moz-transition:opacity .4s, visibility .1s linear .4s;-o-transition:opacity .4s, visibility .1s linear .4s;transition:opacity .4s, visibility .1s linear .4s;}
 #txtselect_marker {cursor:pointer;background:url(../dleimages/marker.png) -0px -0px no-repeat;}
 #txtselect_marker:hover {background-position:-0px -32px;}
