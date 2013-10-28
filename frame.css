@@ -2,24 +2,33 @@
 # Высплывающее окно для заливки файлов и картинок на сервер
 */
 
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, em, strike, strong, s, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {background:transparent;border:0;font-size:100%;outline:0;vertical-align:baseline;}
 
-html,body {font-size:11px;font-family:Verdana, "Geneva CY", "DejaVu Sans", sans-serif;height:100%;margin:0;padding:0;background:none;}
-input, textarea, select, button {font-family:Verdana, "Geneva CY", "DejaVu Sans", sans-serif;font-size:100%;margin:0;}
-input, select, textarea {outline:none;}
+html,body {font:normal 11px/1.5em Verdana, "Geneva CY", "DejaVu Sans", sans-serif;height:100%;width:100%;color:#373737;}
+
+table {border-collapse:collapse;border-spacing:0;}
+td, td img {vertical-align:top} 
+
 img {border:0;}
 hr {color:#999;border:0 none;border-top:dashed 1px #999;height:1px;}
-form {margin:0;padding:0;}
-table {border:0;}
-table td {padding:0;font-size:11px;font-family:Verdana;}
 
-a:active,a:visited,a:link {color:#4b719e;text-decoration:none;}
+a:active, a:visited, a:link {color:#4b719e;text-decoration:none;}
 a:hover {color:#4b719e;text-decoration:underline;}
+
+input, textarea, select, button {font-family:Verdana, "Geneva CY", "DejaVu Sans", sans-serif;font-size:100%;margin:0;color:#373737;background:#fff;}
+input, select, textarea {outline:none;border:1px solid #9E9E9E;}
+
+input {vertical-align:middle;}
+textarea {overflow:auto;vertical-align:top;}
+input[type="text"], input[type="password"], textarea {padding:0}
+input[type="radio"] {vertical-align:text-bottom}
+button, label, input[type="button"], input[type="submit"], input[type="reset"] {cursor:pointer}
+button::-moz-focus-inner, input::-moz-focus-inner {border:0;padding:0;}
+
+
+
 .navigation {color:#999898;font-size:11px;font-family:Tahoma, "Geneva CY", sans-serif;}
-.edit {border:1px solid #9E9E9E;color:#000;font-size:11px;font-family:Verdana;background-color:#fff }
-
-select {color:#000;font-size:11px;border:1px solid #9E9E9E;}
-textarea {border:1px solid #9E9E9E;color:#000;font-size:11px;background-color:#fff }
-
+.bk, .uploadedfile {-moz-transition:all 0.3s ease;-webkit-transition:all 0.3s ease;-o-transition:all 0.3s ease;-ms-transition:all 0.3s ease;}
 
 
 /*---Всплывающее окно подсказок для полей---*/
@@ -30,11 +39,15 @@ textarea {border:1px solid #9E9E9E;color:#000;font-size:11px;background-color:#f
 .xprofile textarea, .xprofile input {font-size:11px;border:1px solid #9E9E9E;background:#fff;}
 .xprofile textarea {width:100%;height:90px;}
 .xprofile input {width:250px;height:18px;}
-.bk {background:#fff;}
+.edit {border:1px solid #9E9E9E;color:#000;background:#fff;padding:3px !important;vertical-align:top;}
+.bk {background:#fff;box-shadow:inset 0 1px 3px rgba(0,0,0,.1),inset 0 1px 0 #fff;transition:all 0.3s ease;}
+.bk:focus {border-color:#7C9DBB;box-shadow:0 0px 3px rgba(99,183,221,.68),inset 0 1px 0 #fff;}
+#linkboximage table, #linkboxfile table {width:100%}
+#imageurl, #imagetitle {float:right}
 
 
 /* Вкладки в окне загрузки файлов */
-.tabs {font:bold 11px/1.5em Verdana, "Geneva CY", "DejaVu Sans", sans-serif;float:left;width:100%;line-height:normal;margin-bottom:-1px;}
+.tabs {font-weight:bold;float:left;width:100%;line-height:normal;margin-bottom:-1px;}
 .tabs ul {margin:0 0 0 5px;padding:10px 10px 0 5px;list-style:none;}
 .tabs li {display:inline;margin:0;padding:0;}
 .tabs a {float:left;margin:0 5px 0 0;padding:0;text-decoration:none;}
@@ -44,18 +57,35 @@ textarea {border:1px solid #9E9E9E;color:#000;font-size:11px;background-color:#f
 
 
 /* Блок загрузки файлов и загруженных файлов */
-.box {height:300px;border:1px solid #B3B3B3;border-radius:3px;background:#fff;overflow:auto;}
-.uploadedfile {width:115px;height:130px;margin:10px 5px 5px 5px;border:1px solid #C6C6C6;box-shadow:0 1px 4px rgba(0,0,0,0.3);-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);float:left;text-align:center;background:#fff;}
+.box {height:300px;border:1px solid #B3B3B3;border-radius:3px;background:#fff;overflow:auto;margin-bottom:5px;}
+.uploadedfile {width:115px;height:130px;margin:10px 5px 5px 5px;border:1px solid #C6C6C6;box-shadow:0 1px 4px rgba(0,0,0,0.3);float:left;text-align:center;background:#fff;transition:all 0.3s ease;}
+.uploadedfile:hover {border:1px solid #93BDE4;box-shadow:0 1px 4px rgba(99,183,221,.68);}
 .uploadimage {margin-top:5px;width:115px;height:90px;display:table-cell;text-align:center;vertical-align:middle;}
-.info {text-align:left;white-space:nowrap;margin:0 5px;overflow:hidden;}
+.info {text-align:left;white-space:nowrap;margin:0 5px;overflow:hidden;text-overflow:ellipsis;cursor:default;}
 
-.button, .qq-upload-button {font-weight:bold;line-height:1.5em;font-size:11px;border-radius:3px;box-shadow:inset 0 1px 0 #fff, 0 1px 3px 0 rgba(0,0,0,.1);border:1px solid #ccc;cursor:pointer;text-shadow:1px 1px 0 #fff;color:#000;background:#f7f7f7;background:-moz-linear-gradient(top, #f7f7f7 0%, #fff 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#fff));background:-webkit-linear-gradient(top, #f7f7f7 0%,#fff 100%);background:-o-linear-gradient(top, #f7f7f7 0%,#fff 100%);background:-ms-linear-gradient(top, #f7f7f7 0%,#fff 100%);background:linear-gradient(to bottom, #f7f7f7 0%,#fff 100%);}
-.button:hover, .qq-upload-button:hover {background:#ededed;background:-moz-linear-gradient(top, #ededed 0%, #f9f9f9 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#f9f9f9));background:-webkit-linear-gradient(top, #ededed 0%,#f9f9f9 100%);background:-o-linear-gradient(top, #ededed 0%,#f9f9f9 100%);background:-ms-linear-gradient(top, #ededed 0%,#f9f9f9 100%);background:linear-gradient(to bottom, #ededed 0%,#f9f9f9 100%);}
+.button, .qq-upload-button {font-weight:bold;border-radius:3px;box-shadow:inset 0 1px 0 #fff, 0 1px 3px 0 rgba(0,0,0,.1);border:1px solid #ccc;cursor:pointer;text-shadow:1px 1px 0 #fff;color:#000;
+background:#f7f7f7;
+background:-moz-linear-gradient(top, #f7f7f7 0%, #fff 100%);
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#fff));
+background:-webkit-linear-gradient(top, #f7f7f7 0%,#fff 100%);
+background:-o-linear-gradient(top, #f7f7f7 0%,#fff 100%);
+background:-ms-linear-gradient(top, #f7f7f7 0%,#fff 100%);
+background:linear-gradient(to bottom, #f7f7f7 0%,#fff 100%);
+}
+.button:hover, .qq-upload-button:hover {
+background:#ededed;
+background:-moz-linear-gradient(top, #ededed 0%, #f9f9f9 100%);
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#f9f9f9));
+background:-webkit-linear-gradient(top, #ededed 0%,#f9f9f9 100%);
+background:-o-linear-gradient(top, #ededed 0%,#f9f9f9 100%);
+background:-ms-linear-gradient(top, #ededed 0%,#f9f9f9 100%);
+background:linear-gradient(to bottom, #ededed 0%,#f9f9f9 100%);
+}
 .button:active, .qq-upload-button:active {box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.2);text-shadow:1px -1px 0 #fff;}
 .button {padding:4px 10px 4px 10px;margin-left:2px;margin-top:5px;}
 
 .properties {float:left;margin-top:8px;}
-.linkbox {margin-top:5px;padding:10px;border:1px solid #B3B3B3;border-radius:3px;background:#fff;}
+.linkbox {margin-top:10px;padding:10px;border:1px solid #B3B3B3;border-radius:3px;background:#fff;}
 #file-uploader {min-height:50px;}
 #flash-uploader {min-height:50px;}
 #stmode {padding:10px;}
@@ -64,8 +94,7 @@ textarea {border:1px solid #9E9E9E;color:#000;font-size:11px;background-color:#f
 
 /* HTML5 загрузчик файлов */
 .qq-uploader {position:relative;width:100%;}
-.qq-upload-button {display:block;/* or inline-block */
-width:310px;padding:4px 10px 4px 10px;margin-left:2px;margin-top:5px;}
+.qq-upload-button {display:block;width:310px;padding:4px 10px 4px 10px;margin-left:2px;margin-top:5px;}
 .qq-upload-button-hover {}
 .qq-upload-button-focus {border-color:#084FD2;}
 .qq-upload-drop-area {position:absolute;top:0;left:0;width:100%;height:100%;min-height:50px;z-index:2;background:#FF9797;text-align:center;}
@@ -74,16 +103,15 @@ width:310px;padding:4px 10px 4px 10px;margin-left:2px;margin-top:5px;}
 .qq-upload-list {margin:0;padding:0;list-style:disc;}
 .qq-upload-list li {margin:0;padding:2px;}
 .qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {margin-right:7px;}
-.qq-upload-file {}
 .qq-upload-spinner {display:inline-block;background:url("dleimages/loading.gif");width:15px;height:15px;vertical-align:text-bottom;}
-.qq-upload-size,.qq-upload-cancel {font-size:11px;}
-.qq-upload-failed-text {display:none;}
-.qq-upload-fail .qq-upload-failed-text {display:inline;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px}
+.qq-upload-failed-text {display:none}
+.qq-upload-fail .qq-upload-failed-text {display:inline}
 
 
 /* Флеш загрузчик файлов */
 .progressWrapper {width:99%;overflow:hidden;}
-.progressContainer {margin:5px;padding:4px;border:solid 1px #B3B3B3;background-color:#F5F5F5;overflow:hidden;}
+.progressContainer {margin:5px;padding:4px;border:1px solid #B3B3B3;background-color:#F5F5F5;overflow:hidden;}
 
 .message {margin:1em 0;padding:10px 20px;border:solid 1px #FFDD99;background-color:#FFFFCC;overflow:hidden;}
 	.red {border:1px solid #B50000;background-color:#FFEBEB;}
@@ -95,5 +123,5 @@ width:310px;padding:4px 10px 4px 10px;margin-left:2px;margin-top:5px;}
 .progressBarComplete {width:100%;background-color:green;visibility:hidden;}
 .progressBarError {width:100%;background-color:red;visibility:hidden;}
 .progressBarStatus {margin-top:2px;width:99%;font-size:7pt;text-align:left;white-space:nowrap;}
-a.progressCancel {font-size:0;display:block;height:14px;width:14px;background-image:url(../../engine/classes/uploads/swfupload/cancelbutton.gif);background-repeat:no-repeat;background-position:-14px 0;float:right;}
+a.progressCancel {font-size:0;display:block;height:14px;width:14px;background:url(../../engine/classes/uploads/swfupload/cancelbutton.gif) no-repeat -14px 0;float:right;}
 a.progressCancel:hover {background-position:0 0;}
