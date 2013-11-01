@@ -1,32 +1,31 @@
 <!-- РЕЗУЛЬТАТЫ ПОИСКА ПО НОВОСТЯМ -->
 [searchposts]
 	<!-- Стандартный шаблон поиска -->
-	<!-- Самый простой способ сделать этот шаблон - взять короткую новость(shortstory.tpl) и поменять некоторые теги согласно справке -->
-	<!-- Будте внимательны, т.к. некоторые теги используемые в shortstory.tpl не поддерживаются -->
+	<!-- Самый простой способ сделать этот шаблон - взять короткую новость(shortstory.tpl) -->
 	[fullresult]
 	<div class="news">
-		<h2>#{search-id} [result-link]{result-title}[/result-link] {favorites}</h2>
+		<h2>[full-link]{title}[/full-link] {favorites}</h2>
+		[rating]{rating}[/rating]
 
 		<div class="marginTop">
-			<p>Автор: {result-author} от {result-date} | Категория: {link-category}</p>
-			<p>Просмотров: {views} | Комментариев: {result-comments}</p>
-			<p>[edit]Правка[/edit]</p>
+			<p>Автор: {author} от [day-news]{date}[/day-news] | Категория: {link-category}</p>
+			<p>Просмотров: {views} | Комментариев: [com-link]{comments-num}[/com-link]</p>
 		</div>
 
-		<div>{result-text}</div>
+		<div>{short-story}</div>
 
 		[edit-date]<div>Новость отредактировал: <b>{editor}</b> - {edit-date}[edit-reason]<br />Причина: {edit-reason}[/edit-reason]</div>[/edit-date]
 
-		<div>[result-link]<b>Подробнее</b>[/result-link]</div>
+		<div>[full-link]<b>Подробнее</b>[/full-link]</div>
 	</div>
 	[/fullresult]
 
 	<!-- Упрощённый вид шаблона -->
-	<!-- Применяется если пользователь использует "расширенный поиск" и поставил переключатель "Результаты поиска как заголовки" -->
+	<!-- Применяется если пользователь использует "Расширенный поиск" и поставил там переключатель "Результаты поиска как заголовки" -->
 	[shortresult]
 	<div>
-		<h3>[result-link]{result-title}[/result-link]</h3>
-		<b>{result-date}</b> | {link-category} | Автор: {result-author}
+		<h3>[full-link]{title}[/full-link]</h3>
+		<b>[day-news]{date}[/day-news]</b> | {link-category} | Автор: {author}
 	</div>
 	[/shortresult]
 [/searchposts]
@@ -35,32 +34,36 @@
 
 <!-- РЕЗУЛЬТАТЫ ПОИСКА ПО КОММЕНТАРИЯМ -->
 [searchcomments]
-	<!-- Самый простой способ сделать этот шаблон - взять комментарии (comments.tpl) и поменять некоторые теги согласно справке -->
-	<!-- Будте внимательны, т.к. некоторые теги используемые в comments.tpl не поддерживаются -->
+	<!-- Самый простой способ сделать этот шаблон - взять комментарии (comments.tpl) -->
 	[fullresult]
 	<div class="comm">
-		<p>{result-author} {result-date}</p>
+		<!-- Общяя информация -->
+		<p>{author} ({group-name}) {date}</p>
+		<p>Комментариев: {comm-num} | Публикаций: {news-num} | Статус: [online]Оффлайн[/online][offline]Онлайн[/offline]</p>
 
-		<p>Регистрация: {registration}</p>
+		<!-- Аватар -->
+		<div><img src="{foto}" alt="Аватарка" /></div>
 
-		<div><img src="{foto}" alt=""/></div>
+		<!-- Заголовок-ссылка для "Последних комментариев", чтоб пользователь мог перейти в новость, где находится комментарий -->
+		<h4>{news_title}</h4>
 
-		<h4>[result-link]{result-title}[/result-link]</h4>
+		<!-- Текст комментария -->
+		{comment}
 
-		{result-text}
-
+		<!-- Подпись пользователя -->
 		[signature]<div>{signature}</div>[/signature]
 
-		<p>[com-edit]Изменить[/com-edit] [com-del]Удалить[/com-del]</p>
+		<!-- Опции с комментарием -->
+		<p>{mass-action} [spam]Спам[/spam] [complaint]Жалоба[/complaint] [com-edit]Изменить[/com-edit] [com-del]Удалить[/com-del] [fast]<b>Цитата</b>[/fast]</p>
 	</div>
 	[/fullresult]
 
 	<!-- Упрощённый вид шаблона -->
-	<!-- Применяется если пользователь использует "расширенный поиск" и поставил переключатель "Результаты поиска как заголовки" и при этом производит поиск по комментариям -->
+	<!-- Применяется если пользователь использует "Расширенный поиск", поставил там переключатель "Результаты поиска как заголовки" и при этом производит поиск по комментариям -->
 	[shortresult]
 	<div>
-		<h3>[result-link]{result-title}[/result-link]</h3>
-		<b>{result-date}</b> | {link-category} | Автор: {result-author} | [com-edit]Изменить[/com-edit] | [com-del]Удалить[/com-del]
+		<h3>{news_title}</h3>
+		<b>{date}</b> | {news_title} | Автор: {author} | [com-del]Удалить[/com-del] [spam]Спам[/spam] [complaint]Жалоба[/complaint]
 	</div>
 	[/shortresult]
 [/searchcomments]

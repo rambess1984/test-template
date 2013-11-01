@@ -74,7 +74,7 @@
 	<!-- Совет: Вы можете взять за основу шаблон комментариев(comments.tpl) -->
 	[readpm]
 	<div class="comm">
-		<p>{author} ({group-name}) {date}</p>
+		<p>{author} ([online]онлайн[/online][offline]оффлайн[/offline]) {date}</p>
 		<p>Комментариев: {comm-num} | Публикаций: {news-num}</p>
 
 		<!-- Аватар -->

@@ -101,25 +101,22 @@ background:linear-gradient(to bottom, #ededed 0%,#f9f9f9 100%);
 .qq-upload-list {margin:0;padding:0;list-style:disc;}
 .qq-upload-list li {margin:0;padding:2px;}
 .qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {margin-right:7px;}
-.qq-upload-spinner {display:inline-block;background:url('../../engine/skins/images/loading.gif');width:15px;height:15px;vertical-align:text-bottom;}
+.qq-upload-spinner {display:none;background:url('../../engine/skins/images/loading.gif');width:15px;height:15px;vertical-align:text-bottom;}
 .qq-upload-size,.qq-upload-cancel {font-size:11px}
 .qq-upload-failed-text {display:none}
 .qq-upload-fail .qq-upload-failed-text {display:inline}
 
 
-/* Флеш загрузчик файлов */
-.progressWrapper {width:99%;overflow:hidden;}
-.progressContainer {margin:5px;padding:4px;border:1px solid #B3B3B3;background:#F5F5F5;overflow:hidden;border-radius:3px;}
-
-.message {margin:1em 0;padding:10px 20px;border:solid 1px #FFDD99;background-color:#FFFFCC;overflow:hidden;}
-	.red {border:1px solid #B50000;background-color:#FFEBEB;}
-	.green {border:1px solid #B3B3B3;background-color:#F5F5F5;}
-	.blue {border:1px solid #B3B3B3;background-color:#F5F5F5;}
-
-.progressName {font-size:8pt;font-weight:700;color:#555;width:323px;height:14px;text-align:left;white-space:nowrap;overflow:hidden;}
-.progressBarInProgress,.progressBarComplete,.progressBarError {font-size:0;width:0%;height:2px;background-color:blue;margin-top:2px;}
-.progressBarComplete {width:100%;background-color:green;visibility:hidden;}
-.progressBarError {width:100%;background-color:red;visibility:hidden;}
-.progressBarStatus {margin-top:2px;width:99%;font-size:7pt;text-align:left;white-space:nowrap;}
-a.progressCancel {font-size:0;display:block;height:14px;width:14px;background:url('../../engine/classes/uploads/swfupload/cancelbutton.gif') no-repeat -14px 0;float:right;}
-a.progressCancel:hover {background-position:0 0;}
+.progressbar {overflow:hidden;height:15px;margin-top:5px;box-shadow:inset 0 1px 2px rgba(0,0,0,.1),0 1px 0 rgba(255,255,255,.9);border-radius:3px;border:1px solid #B3B3B3;
+background:#fff;}
+.progressbar span {color:#fff;text-align:center;text-indent:100%;white-space:nowrap;height:15px;display:block;overflow:hidden;text-shadow:0 1px 0 rgba(0,0,0,.25);
+background: #5fb8ef;
+background: -moz-linear-gradient(top,  #5fb8ef 0%, #3c8fbc 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5fb8ef), color-stop(100%,#3c8fbc));
+background: -webkit-linear-gradient(top,  #5fb8ef 0%,#3c8fbc 100%);
+background: -o-linear-gradient(top,  #5fb8ef 0%,#3c8fbc 100%);
+background: -ms-linear-gradient(top,  #5fb8ef 0%,#3c8fbc 100%);
+background: linear-gradient(to bottom,  #5fb8ef 0%,#3c8fbc 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fb8ef', endColorstr='#3c8fbc',GradientType=0 );
+background-repeat: repeat-x;
+}

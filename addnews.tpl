@@ -14,7 +14,9 @@ $(function(){
 	<ul class="form">
 		<li>
 			<p>Заголовок:</p>
-			<input type="text" name="title" value="{title}" />
+			<input type="text" name="title" id="title" value="{title}" />
+			<input class="bbcodes" title="Найти похожие новости" onclick="find_relates(); return false;" type="button" value="Найти похожее" />
+			<span id="related_news"></span>
 		</li>
 
 		[urltag]

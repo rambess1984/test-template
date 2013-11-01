@@ -239,6 +239,9 @@ a.highslide-full-expand {background:url("../../../engine/classes/highslide/graph
 
 
 /* ƒиалоговые и всплывающие окна jQuery UI */
+.ui-helper-hidden {display:none}
+.ui-helper-hidden-accessible {position:absolute;left:-99999999px;}
+.ui-helper-reset {margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none;}
 .ui-helper-clearfix:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
 .ui-helper-clearfix {display:inline-block;}
 * html .ui-helper-clearfix {height:1%;}
@@ -290,6 +293,10 @@ button.ui-button::-moz-focus-inner {border:0;padding:0;}
 .ui-dialog .ui-resizable-se {bottom:3px;height:14px;right:3px;width:14px;}
 .ui-draggable .ui-dialog-titlebar {cursor:move;}
 .ui-dialog-buttonpane {border-color:#eee;}
+
+
+/* Ќайденные похожие новости, при добавлении новостей */
+.findrelated {background:#FFFEDA;border:1px solid #DFE187;padding:5px;margin:10px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.8);}
 
 
 /* јвтозаполнение облака тегов */
