@@ -3,10 +3,10 @@
 <head>
 <meta content="text/html; charset={charset}" http-equiv="Content-Type" />
 <style type="text/css">
-* {padding:0; margin:0;}
+* {padding:0;margin:0;}
 body{ 
 	font: 12px/16px Arial, Helvetica, Tahoma, sans-serif;
-	margin: 0; padding: 0;
+	margin:0;padding:0;
 	color: #1f282c; word-wrap: break-word;
 }
 a { color: blue; text-decoration: underline; }

@@ -1,4 +1,4 @@
-<div class="votes">
+<div class="dle-votes">
 	<b>{title}</b>
 
 	[votelist]<form method="post" name="vote" action='#'>[/votelist]
