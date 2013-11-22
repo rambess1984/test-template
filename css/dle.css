@@ -134,7 +134,7 @@ background: linear-gradient(to bottom,  #ededed 0%,#f9f9f9 100%);
 #b_tnl {background-image:url("../bbcodes/translit.gif");}
 #b_br {background-image:url("../bbcodes/pbreak.gif");}
 #b_pl {background-image:url("../bbcodes/page.gif");}
-.bb-editor textarea {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:2px;border:1px solid #bcc0c2;width:100%;background:#fff;resize:vertical;min-height:50px;}
+div.bb-editor textarea {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:2px;border:1px solid #bcc0c2;width:100%;background:#fff;resize:vertical;min-height:50px;}
 .editorcomm .bb-editor, #pm .bb-editor {width:465px;margin-bottom:5px;}
 .editorcomm .bb-editor textarea {height:156px}
 .bb-pane .clr {clear:both}
@@ -151,7 +151,7 @@ background: linear-gradient(to bottom,  #ededed 0%,#f9f9f9 100%);
 .xfields_table td {vertical-align:top}
 
 
-/* Выпадающее меню кнопки редактирования новостей */
+/* Выпадающее меню кнопки "Редактировать" у новостей */
 #dropmenudiv {border:1px solid #777;background:#fff;font-size:11px;line-height:20px;margin:2px 0;padding:5px;}
 #dropmenudiv a {display:block;text-indent:3px;text-decoration:none;padding:1px 0;width:100%;}
 #dropmenudiv a:hover {background:#eee;}
