@@ -11,12 +11,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {displa
 
 html {font-size:100.01%;overflow-y:scroll;}
 body {font:12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;line-height:1.4;text-align:left;}
-html, body {height:100%;width:100%;}
+html, body {height:100%;width:100%;color:#5F5F5F;}
 
 ol, ul {list-style:none}
 img {border:none;-ms-interpolation-mode:bicubic;}
 
-a {background:transparent;font-size:100%;margin:0;padding:0;vertical-align:baseline;color:#213CFF;}
+a {background:transparent;font-size:100%;margin:0;padding:0;vertical-align:baseline;color:#5A609C;}
 a:focus {outline:thin dotted}
 a:hover {color:#888}
 a:hover, a:active {outline:0}
@@ -45,7 +45,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {border:0;padding:0;}
 
 
 /* иряър */
-#header {background:#9AB7FF;padding:20px;}
+#header {background:#D5E2FF;padding:20px;}
 .siteSearch {margin-top:20px;}
 
 

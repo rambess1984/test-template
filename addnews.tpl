@@ -1,13 +1,3 @@
-<!-- Дефолтный скрипт для изменения input поля "Категория" -->
-<link rel="stylesheet" type="text/css" href="engine/skins/chosen/chosen.css"/>
-<script type="text/javascript" src="engine/skins/chosen/chosen.js"></script>
-<script type="text/javascript">
-$(function(){
-	$('#category').chosen({allow_single_deselect:true, no_results_text: 'Ничего не найдено'});
-});
-</script>
-<!-- Дефолтный скрипт для изменения input поля "Категория" -->
-
 <div id="addnews" class="dle-page">
 	<h2>Добавить новость</h2>
 
